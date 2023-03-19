@@ -1,0 +1,28 @@
+type Query {
+  getOrderSourceDevice(order_id: String!): String @resolver(class: "Ahmed\\order\\Model\\Resolver\\GetOrderSourceDevice")
+}
+
+type Mutation {
+  updateOrderSourceDevice(order_id: String!, order_source_device: String!): Boolean @resolver(class: "Ahmed\\order\\Model\\Resolver\\SetOrderSourceDevice")
+}
+
+type OrderUpdateResult {
+  success: Boolean!
+}
+
+input OrderUpdateInput {
+  order_id: Int!
+  order_source_device: String!
+}
+
+type OrderUpdateResponse {
+  result: OrderUpdateResult
+}
+
+type OrderUpdatePayload {
+  input: OrderUpdateInput!
+}
+
+type OrderUpdateOutput {
+  response: OrderUpdateResponse
+}
