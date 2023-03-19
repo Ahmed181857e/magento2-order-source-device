@@ -5,7 +5,7 @@ This module adds a new attribute to the `sales_order` table in Magento 2 to stor
 ## Installation
 
 1. Create a directory app/code/Ahmed/order if it doesn't exist..
-2. Clone this repository inside the directory using the command: git clone https://github.com/Ahmed181857e/magento2-order-source-device.git ..
+2. Clone this repository inside the directory using the command: git clone https://github.com/Ahmed181857e/magento2-order-source-device.git .
 3. Run  bin/magento module:enable Ahmed_Order.
 4. Run `bin/magento setup:di:compile`.
 5. Run `bin/magento cache:clean`.
