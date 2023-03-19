@@ -4,7 +4,7 @@ This module adds a new attribute to the `sales_order` table in Magento 2 to stor
 
 ## Installation
 
-1. Copy the module files to `app/code/Ahmed/Order`.
+1. Copy the module files to `app/code`.
 2. Run `php bin/magento module:enable Ahmed_Order`.
 3. Run `php bin/magento setup:upgrade`.
 4. Run `php bin/magento setup:di:compile`.
@@ -19,4 +19,8 @@ mutation UpdateOrderSourceDevice($orderId: String!, $orderSourceDevice: String!)
   updateOrderSourceDevice(order_id: $orderId, order_source_device: $orderSourceDevice) {
     success
   }
+}
+
+query {
+  getOrderSourceDevice(order_id: "000000006")
 }
