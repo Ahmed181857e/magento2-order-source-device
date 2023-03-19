@@ -13,14 +13,13 @@ This module adds a new attribute to the `sales_order` table in Magento 2 to stor
 ## GraphQL API
 
 The module adds a new GraphQL mutation `updateOrderSourceDevice` to update the `order_source_device` attribute for an order:
+and can get data
 
 ```graphql
-mutation UpdateOrderSourceDevice($orderId: String!, $orderSourceDevice: String!) {
-  updateOrderSourceDevice(order_id: $orderId, order_source_device: $orderSourceDevice) {
-    success
-  }
-}
-
+ mutation {
+   updateOrderSourceDevice(order_id: "oderID", order_source_device: "mobile")     
+ }
+ 
 query {
-  getOrderSourceDevice(order_id: "000000006")
+  getOrderSourceDevice(order_id: "oderID")
 }
